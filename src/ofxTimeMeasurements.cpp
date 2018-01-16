@@ -1185,7 +1185,7 @@ void ofxTimeMeasurements::draw(int x, int y) {
 	if(menuActive ) ofSetColor(hilightColor.getInverted());
 	else ofSetColor(hilightColor);
 	drawString(" '" + ofToString(char(activateKey)) + "'", x, y + lastLine);
-
+	
 	//show averaging warning
 	if (averaging) {
 		if (currentFrameNum % 5 < 2) ofSetColor(hilightColor);
@@ -1767,7 +1767,7 @@ void ofxTimeMeasurements::drawSmoothFpsClock(float x, float y, float radius){
 	#if (OF_VERSION_MINOR <= 9)
 	ofRotate(r, 0, 0, 1);
 	#else
-	ofRotateDeg(r, 0, 0, 1);
+	ofRotate(r, 0, 0, 1);
 	#endif
 	float s = radius * 0.05;
 	ofDrawRectangle(-s * 0.5f, - 0.5f * s, radius, s);
